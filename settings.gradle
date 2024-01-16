@@ -1,7 +1,0 @@
-def projectDirs = fileTree(projectDir).include { it.isDirectory() }.collect { it.toString() }
-
-projectDirs.each { dir ->
-    include("${dir.substring(projectDir.toString().length() + 1)}:app")
-}
-
-rootProject.name = 'MultiModuleProject'
